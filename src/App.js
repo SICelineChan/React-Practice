@@ -8,6 +8,7 @@ export default function App() {
 
   const output = timeNow.getHours();
   const minute = timeNow.getMinutes();
+  const seconds = timeNow.getSeconds();
   if (output > 18) {
     changeColor.color = 'green';
     greetings = 'Good Evening';
@@ -24,7 +25,7 @@ export default function App() {
       <h2>Hello</h2>
       <h3 style={changeColor}>{greetings}</h3>
       <h3 id="changeColor">
-        The time now is {output}: {minute} hour!
+        The time now is {output}: {minute}: {seconds}!
       </h3>
     </div>
   );
